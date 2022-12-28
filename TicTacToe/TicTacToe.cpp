@@ -30,6 +30,7 @@ int main() {
 	cout << "X or O player one?? [X/O] "; cin >> playerOne;
 	if (playerOne != 'X' && playerOne != 'O') {
 		if (playerOne == 'o') playerOne = 'O';
+		else if (playerOne == 'x') playerOne = 'X';
 		else playerOne = 'X';
 	}
 
