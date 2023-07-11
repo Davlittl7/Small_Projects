@@ -1,6 +1,5 @@
 #include <iostream>
 #include "func.hpp"
-//#include "main.cpp"
 
 using std::cout; using std::endl;
 
@@ -80,7 +79,6 @@ void board(Snake& newSnake, Food& newFood) {
 		}
 		cout << "#" << endl;
 	}
-	//++snakePosition.X;
 }
 
 //Food member function
@@ -88,10 +86,4 @@ void Food::generateFood() {
 	pos_.X = (rand() % (width - 3)) + 1;
 	pos_.Y = (rand() % (height - 3)) + 1;
 
-	//If statements to ensure that the food stays on the board
-}
-
-//Calculates the square of a number
-int squared(int base) {
-	return base * base;
 }
