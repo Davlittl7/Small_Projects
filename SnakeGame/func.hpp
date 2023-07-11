@@ -18,8 +18,6 @@ using std::vector;
 //FUNC DECLARATIONS
 void board(class Snake& newSnake, class Food& newFood);
 
-int squared(int base);
-
 //CLASSES
 
 //snake character
@@ -65,5 +63,6 @@ public:
 private:
 	COORD pos_;
 };
+
 
 #endif
