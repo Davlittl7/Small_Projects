@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic Calculator</title>
+    </head>
+    <body style="background-color: aqua;">
+        <h1 style = "text-align: center; color: blue;">Basic Calculator</h1>
+
+        <img src = "" alt ="Random pic haha">
+        <!-- Form to input numbers -->
+        <div style = "text-align: center;" id = "calculator">
+            <form id = "calculatorForm">
+                Enter your first number: <input type= "number" id = "numberOne" placeholder="0"/> <br>
+                Enter your second number: <input type= "number" id = "numberTwo" placeholder="0"/> <br>
+
+                <!--Allows user to select whatever operation they want from these four-->
+                <select id = "operationChoice">
+                    <option value = "addition" id = "add">Addition</option>
+                    <option value = "subtraction" id = "subtract">Subtraction</option>
+                    <option value = "multiplication" id = "multiply">Multiplication</option>
+                    <option value = "division" id = "divide">Division</option>
+                </select> <br>
+                <input type="button" id = "solveBtn" value = "Solve it!" onclick="solve()">
+                
+            </form>
+
+            <p style="font-weight: bold;" id = "answerPrompt">Your answer here!</p>
+            <p style = "display: none; font-weight: bold;" id = "solvedAnswer">Answer</p>
+        </div>
+        <script>
+            //Function that determines what option is selected and performs action
+            function solve() {
+                let x = parseFloat(document.getElementById("numberOne").value);
+                let y = parseFloat(document.getElementById("numberTwo").value);
+
+                //Determines the operation the user chose
+                let opChoice = document.getElementById("operationChoice").value;
+
+                //Switch case to perform operation chosen 
+                switch(opChoice) {
+                    case "addition":
+                        document.getElementById("solvedAnswer").innerHTML = x + y;
+                        document.getElementById("solvedAnswer").style.display = "block";
+                        break;
+                    case "subtraction":
+                        document.getElementById("solvedAnswer").innerHTML = x - y;
+                        document.getElementById("solvedAnswer").style.display = "block";
+                        break;
+                    case "multiplication":
+                        document.getElementById("solvedAnswer").innerHTML = x * y;
+                        document.getElementById("solvedAnswer").style.display = "block";
+                        break;
+                    case "division":
+                        document.getElementById("solvedAnswer").innerHTML = x / y;
+                        document.getElementById("solvedAnswer").style.display = "block";
+                        break;
+                }
+            }
+        </script>
+    </body>
+</html>
