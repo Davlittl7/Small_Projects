@@ -67,7 +67,7 @@ void Draw() {
 
 			if (j == width - 1) cout << "#";
 		}
-		cout << endl; //What he forgot in class
+		cout << endl; 
 	}
 
 	//Draws the bottom of the board
