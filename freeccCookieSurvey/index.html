@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <h1 id = "title">Cookie Survey</h1>
+    <p id="description">This is a survey to get feedback on Davonte's Cookies</p>
+    <div class="survey-questions">
+      <form id="survey-form">
+        <label for="name" id="name-label"> Name: <input type="text" id="name" placeholder="John Doe" required></label>
+        <label for="email" id="email-label"> Email: <input type="email" id="email" placeholder="johndoe@gmail.com"required></label>
+        <label for="number" id="number-label">How many cookies ordered: <input id="number" type=number min="1" max = "99" placeholder="1"></label>
+        <label for="dropdown">How'd you hear about our cookies:
+          <select id="dropdown">
+            <option value="N/A">Nowhere</option>
+            <option value="Web">Website</option>
+            <option value="Ad">Advertisement</option>
+          </select>
+        </label>
+        <fieldset>
+          <legend>Thoughts on the cookies?</legend>
+          <label for="loved">Loved!<input type="radio" name="cookie-thoughts" value="Loved!" id="loved"></label>
+          <label for="liked">Liked!<input type="radio" name="cookie-thoughts" value="Liked!" id="liked"></label>
+          <label for="hated">Hated<input type="radio" name="cookie-thoughts" value="Hated" id="hated"></label>
+        </fieldset>
+        <fieldset>
+          <legend>What cookies did you order?</legend>
+          <label for="chocolate-chip">Choc Chip<input type="checkbox" name="CC" id="chocolate-chip" value="chocolate-chip"></label>
+          <label for="oatmeal">Oatmeal CC<input type="checkbox" name="Oat" id="oatmeal" value="oameal"></label>
+        </fieldset>
+        <label for="additional">Additional Comments?
+          <textarea rows="5" cols="25"></textarea>
+        </label>
+        <input type="submit" id="submit">
+      </form>
+    </div>
+  </body>
+</html>
